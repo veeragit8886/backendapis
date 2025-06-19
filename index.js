@@ -2,7 +2,8 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-const Routers = require('./Routers/routers');
+const userRouters = require('./Routers/userRouters');
+const productRouters = require("./Routers/productRouters")
 const cors = require('cors');
 const errorHandler = require('./middleware/errorHandler');
 const app = express();
@@ -17,7 +18,9 @@ app.use(cors({
 app.use(express.json());
 
 
-app.use("/api", Routers);
+app.use("/", userRouters);
+
+app.use("/",productRouters);
 
 
 app.use(errorHandler);

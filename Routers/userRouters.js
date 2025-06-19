@@ -17,7 +17,6 @@ Routers.post("/addUsers",userControllers.addUser)
 Routers.put("/users/:id",userControllers.updateUser)    
 Routers.delete("/users/:id",userControllers.deleteUser)
 
-
 // Routers.put("/users/:id", authenticate, updateUser);
 
 

@@ -1,6 +1,7 @@
 const bcrypt = require("bcryptjs");
 const Users = require("../Models/userModel");
 
+
 // Register
 exports.userRegister = async (req, res) => {
     try {
@@ -124,3 +125,6 @@ exports.deleteUser = async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 };
+
+
+
